@@ -1,0 +1,44 @@
+.form {
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 60em;
+}
+.form__field {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  align-items: center;
+  &:nth-child(3) {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    & .form__input {
+      font-style: italic;
+      font-weight: 200;
+      font-size: 0.9em;
+    }
+  }
+}
+.form__input {
+  font-weight: 300;
+}
+.form__textarea {
+  resize: none;
+  height: 8em;
+}
+.form__btn {
+  display: block;
+  margin: 1em auto 0;
+  width: 100%;
+  max-width: 20em;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5em 0;
+  border-radius: 0.5em;
+  filter: grayscale(0.3);
+  &:hover {
+    filter: grayscale(0);
+  }
+}

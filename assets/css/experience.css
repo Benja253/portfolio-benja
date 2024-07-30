@@ -1,0 +1,119 @@
+.habexp {
+  padding-top: 5em;
+}
+/* Solo la parte de habilidades */
+.habilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4em;
+  gap: 1em;
+}
+.hability {
+  width: 20em;
+  color: white;
+  display: grid;
+  place-content: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  filter: brightness(0.9);
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &:nth-child(3n-2) {
+    background-color: #715AFF;
+  }
+  &:nth-child(3n-1) {
+    background-color: var(--primary-color);
+  }
+  &:nth-child(3n) {
+    background-color: #A682FF;
+  }
+}
+@media screen and (min-width: 960px) {
+  .hability {
+    display: grid;
+    place-content: center;
+    position: relative;
+    filter: brightness(0.9);
+    &:hover {
+      filter: brightness(1.1);
+    }
+    &:nth-child(2n - 1) {
+      left: -8em;
+    }
+    &:nth-child(2n) {
+      left: 8em;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .habilities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 15em;
+    gap: 0;
+  }
+  .hability {
+    width: 9em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 1.2em;
+    &:nth-child(2n - 1) {
+      top: -2.5em;
+      left: 0;
+    }
+    &:nth-child(2n) {
+      top: 2.5em;
+      left: 0;
+    }
+  }
+}
+/* Solo la parte de las experiencias */
+.experiencies {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border-left: 0.2em solid var(--primary-color);
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.experience {
+  padding: 0 3em;
+  display: grid;
+  max-width: 56em;
+  width: 100%;
+}
+.experience__header {
+  padding: 1em;
+  padding-left: 2em;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.experience__body {
+  display: grid;
+  gap: 0.5em;
+}
+.experience__title {
+  font-size: 1em;
+  position: relative;
+  &::before {
+    content: '-';
+    font-size: 2em;
+    color: var(--primary-color);
+    position: absolute;
+    top: -12px;
+    left: -50px;
+  }
+}
+.experience__description {
+  font-size: 0.9em;
+  color: #666666;
+  padding-left: 1em;
+  font-style: italic;
+}

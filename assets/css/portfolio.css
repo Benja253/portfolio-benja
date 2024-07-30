@@ -1,0 +1,113 @@
+.portfolio {
+  padding-top: 5em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.portfolio__card {
+  background-color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 20em;
+  box-shadow: 0.2em 0.2em 0.5em #00000020;
+  border-radius: 0.8em;
+  overflow: hidden;
+  transition: transform 100ms ease;
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0.5em 0.5em 1em #00000030;
+  }
+}
+.portfolio__card__body {
+  padding: 1em;
+}
+.portfolio__card__title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+.portfolio__card__description {
+  font-size: 0.9em;
+}
+.portfolio__container__tech {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+.portfolio__logos {
+  font-size: 1.8em;
+  transition: transform 100ms ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.logo-html:hover {
+  color: #e34c26;
+}
+.logo-css:hover {
+  color: #264de4
+}
+.logo-js:hover {
+  color: #f0db4f;
+}
+.logo-bs:hover {
+  color: #59287a
+}
+.portfolio__card__footer {
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+.portfolio__card__btn {
+  font-size: 0.9em;
+  padding: 0.4em 1.5em;
+  border-radius: 0.6em;
+  background-color: var(--primary-color);
+  color: white;
+  filter: grayscale(0.3);
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .portfolio {
+    padding: 5em 2em;
+    width: 90%;
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .portfolio__card {
+    display: grid;
+    max-width: 60em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr 1fr;
+    box-shadow: 0;
+  }
+  .portfolio__card:nth-child(2n) .portfolio__card__header {
+    grid-column: 2 / 3;
+  }
+  .portfolio__card:nth-child(2n) .portfolio__card__body {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .portfolio__card:nth-child(2n) .portfolio__card__footer{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .portfolio__logos {
+    margin-bottom: 0.7em;
+  }
+  .portfolio__card__header {
+    grid-row: span 2;
+  }
+  .portfolio__card__body {
+    padding: 2em;
+    padding-bottom: 0;
+    font-size: 1.1em;
+  }
+}
