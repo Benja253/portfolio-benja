@@ -35,7 +35,7 @@
 }
 .portfolio__card__description {
   font-size: 0.9em;
-  min-height: 10em;
+  min-height: 9em;
 }
 .portfolio__container__tech {
   display: flex;
